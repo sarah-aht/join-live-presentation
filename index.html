@@ -497,7 +497,7 @@
             </a>
             <div class="countdown" id="countdown"></div>
             <div class="reserve-msg" id="reserveMsg"></div>
-            <a id="reserveBtn" class="reserve-btn inactive" target="_blank" rel="noopener">Reserve Your Spot</a>
+            <a id="reserveBtn" class="reserve-btn active" href="https://calendly.com/go_travel" target="_blank" rel="noopener">RESERVE NOW</a>
         </div>
 
         <!-- Wide Screen Bonus -->
@@ -531,7 +531,7 @@
             </ol>
             <div class="help-box">
                 <strong>Having trouble connecting?</strong><br>
-                Simply reply to the <a href="email or SMS">SMS or email where you received the invitation</a>
+                Text or call <a href="tel:808-515-3642">808-515-3642</a>
             </div>
         </div>
 
@@ -740,10 +740,10 @@
                 sbtn.textContent = 'JOIN NOW — WE ARE LIVE';
                 sbtn.setAttribute('href', JOIN_LINK);
                 scount.textContent = '';
-                rbtn.classList.remove('active');
-                rbtn.classList.add('inactive');
-                rbtn.removeAttribute('href');
-                rmsg.innerHTML = 'We&rsquo;re live right now &mdash; join us above! Reservations reopen when the session ends.';
+                rbtn.classList.add('active');
+                rbtn.classList.remove('inactive');
+                rbtn.setAttribute('href', RESERVE_LINK);
+                rmsg.innerHTML = 'Reserve your spot for an upcoming session.';
             } else {
                 btn.classList.remove('active');
                 btn.classList.add('inactive');
@@ -755,7 +755,7 @@
                 rbtn.classList.add('active');
                 rbtn.classList.remove('inactive');
                 rbtn.setAttribute('href', RESERVE_LINK);
-                rmsg.innerHTML = 'Thank you for checking! As of the moment, we aren&rsquo;t live.<br><strong>Reserve your spot now for the next session!</strong>';
+                rmsg.innerHTML = 'Reserve your spot for an upcoming session.';
 
                 const et = getETNow();
                 const nowSec = et.getHours() * 3600 + et.getMinutes() * 60 + et.getSeconds();
